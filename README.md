@@ -40,5 +40,6 @@ Siga os passos abaixo para configurar e executar o projeto localmente:
 3. **Execute o projeto**
     ```
     npm start
+    npm run dev
     ```
 Isso iniciará o servidor de desenvolvimento e você poderá acessar a aplicação em http://localhost:3000.
