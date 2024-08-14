@@ -27,14 +27,19 @@ const Modal = ({ onReportCreation, onClose }) => {
       dataHora: formattedDate,
       litragemPedido,
       litragemDescarregada,
-      evidencias,
+      evidencias: evidencias.map((file) => file.name),
     };
 
     submitData(reportData);
   };
 
   const handleFileChange = (e) => {
-    setEvidencias([...e.target.files]);
+    const files = Array.from(e.target.files);
+    if (files.length + evidencias.length > 3) {
+      alert("Você pode adicionar no máximo 3 arquivos.");
+      return;
+    }
+    setEvidencias((prevEvidencias) => [...prevEvidencias, ...files]);
   };
 
   const URL = "http://localhost:3000/relatorios";
@@ -48,7 +53,7 @@ const Modal = ({ onReportCreation, onClose }) => {
         onClose();
       })
       .catch((err) => {
-        console.error(err.response.data);
+        console.log(err.data);
       });
   }
 
@@ -112,9 +117,7 @@ const Modal = ({ onReportCreation, onClose }) => {
               multiple
             />
           </Label>
-          <Button type="submit">
-            Enviar
-          </Button>
+          <Button type="submit">Enviar</Button>
         </Form>
       </ModalContainer>
     </>
@@ -140,7 +143,7 @@ const Overlay = styled.div`
 
 const ModalContainer = styled.div`
   position: fixed;
-  top: 50%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #212426;
@@ -173,7 +176,7 @@ const Label = styled.label`
 
 const Input = styled.input`
   width: 100%;
-  padding: 10px;
+  padding: 15px;
   margin-top: 5px;
   border: 2px solid #f2f2f2;
   border-radius: 6px;
@@ -181,10 +184,15 @@ const Input = styled.input`
   color: #f2f2f2;
   font-family: "Lexend Deca", sans-serif;
   transition: border-color 0.3s;
+  font-size: 1.2rem;
 
   &:focus {
     border-color: #ef6f07;
     outline: none;
+  }
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding: 10px;
   }
 `;
 

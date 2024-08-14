@@ -7,14 +7,14 @@ import styled from "styled-components";
 
 export default function HomePage() {
   const [showModal, setShowModal] = useState(false);
-  const [reportData, setReportData] = useState(null);
+  const [relatorios, setRelatorios] = useState([]);
 
   function handleClick() {
     setShowModal(true);
   }
 
   function handleReportCreation(data) {
-    setReportData(data);
+    setRelatorios([...relatorios, data]);
     setShowModal(false);
   }
 
@@ -29,7 +29,10 @@ export default function HomePage() {
         </AddButton>
       </Container>
 
-      {reportData && <Report reportData={reportData} />}
+      {relatorios.length > 0 &&
+        relatorios.map((relatorio, index) => (
+          <Report key={index} reportData={relatorio}/>
+        ))}
 
       {showModal && (
         <Modal
@@ -47,10 +50,10 @@ const Container = styled.div`
   justify-content: center;
   margin-top: 40px;
   gap: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-family: Lexend Deca;
   }
 `;
@@ -61,14 +64,14 @@ const AddButton = styled.button`
   justify-content: center;
   height: 35px;
   width: 40px;
-  background-color: #EF6F07;
+  background-color: #ef6f07;
   border-radius: 5px;
   color: #fff;
   font-size: 1.2rem;
   cursor: pointer;
 
   &:hover {
-    background-color: #A34C05;
+    background-color: #a34c05;
     transition: 0.1s;
   }
 `;

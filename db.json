@@ -1,20 +1,3 @@
 {
-  "relatorios": [
-    {
-      "id": 1,
-      "cliente": "Duda Braga",
-      "posto": "Ipiranga",
-      "data/hora": "2024-08-12T10:00:00",
-      "litragemPedido": 500,
-      "litragemDescarregada": 400
-    },
-    {
-      "id": "39ed",
-      "cliente": "Crivelaro",
-      "posto": "Ipiranga",
-      "data/hora": "2024-08-12T10:00:00",
-      "litragemPedido": 700,
-      "litragemDescarregada": 400
-    }
-  ]
+  "relatorios": []
 }

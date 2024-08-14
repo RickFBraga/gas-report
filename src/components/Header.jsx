@@ -25,7 +25,6 @@ const Container = styled.div`
   padding: 20px;
   height: 80px;
   background-color: #053067;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.04);
 `;
 
 const User = styled.div`
@@ -42,7 +41,7 @@ const User = styled.div`
 
   span {
     font-family: Lexend Deca;
-    font-size: 1.20rem;
-    color: #FFF;
+    font-size: 1.2rem;
+    color: #fff;
   }
 `;
