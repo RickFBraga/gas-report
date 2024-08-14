@@ -152,12 +152,19 @@ const ModalContainer = styled.div`
   z-index: 20;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   width: 90%;
-  max-width: 700px;
-  height: 90%;
+  max-width: 600px;
+  height: auto;
+  overflow-y: auto;
 
   @media (max-width: 670px) {
-    padding: 20px;
-    height: 95%;
+    padding: 15px;
+    width: 95%;
+    height: auto;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+    width: 90%;
   }
 `;
 
@@ -167,7 +174,11 @@ const Form = styled.form`
   gap: 15px;
 
   @media (max-width: 670px) {
-    height: 10px;
+    gap: 10px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 8px;
   }
 `;
 
@@ -176,9 +187,14 @@ const Heading = styled.h2`
   text-align: center;
   background-color: #212426;
   color: #f2f2f2;
+  margin-bottom: 20px;
 
   @media (max-width: 670px) {
+    font-size: 1.5rem;
+  }
 
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
   }
 `;
 
@@ -203,14 +219,16 @@ const Input = styled.input`
     border-color: #ef6f07;
     outline: none;
   }
+
   @media (max-width: 768px) {
     font-size: 1rem;
     padding: 10px;
   }
 
   @media (max-width: 670px) {
-    padding: 5px;
-    margin-top: 0;
+    font-size: 0.9rem;
+    padding: 8px;
+    margin-top: 3px;
   }
 `;
 
@@ -230,5 +248,15 @@ const Button = styled.button`
   &:hover {
     background-color: #b55409;
     transform: translateY(-2px);
+  }
+
+  @media (max-width: 670px) {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+    padding: 8px;
   }
 `;
