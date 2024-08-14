@@ -153,7 +153,7 @@ const ModalContainer = styled.div`
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   width: 90%;
   max-width: 700px;
-  height: 90%;
+  height: 100%;
 `;
 
 const Form = styled.form`
