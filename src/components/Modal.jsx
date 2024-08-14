@@ -143,7 +143,7 @@ const Overlay = styled.div`
 
 const ModalContainer = styled.div`
   position: fixed;
-  top: 54%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #212426;
