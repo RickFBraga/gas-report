@@ -153,13 +153,22 @@ const ModalContainer = styled.div`
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   width: 90%;
   max-width: 700px;
-  height: 100%;
+  height: 90%;
+
+  @media (max-width: 670px) {
+    padding: 20px;
+    height: 95%;
+  }
 `;
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 15px;
+
+  @media (max-width: 670px) {
+    height: 10px;
+  }
 `;
 
 const Heading = styled.h2`
@@ -167,6 +176,10 @@ const Heading = styled.h2`
   text-align: center;
   background-color: #212426;
   color: #f2f2f2;
+
+  @media (max-width: 670px) {
+
+  }
 `;
 
 const Label = styled.label`
@@ -193,6 +206,11 @@ const Input = styled.input`
   @media (max-width: 768px) {
     font-size: 1rem;
     padding: 10px;
+  }
+
+  @media (max-width: 670px) {
+    padding: 5px;
+    margin-top: 0;
   }
 `;
 
