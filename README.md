@@ -1,8 +1,41 @@
-# React + Vite
+# GasReport
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição
 
-Currently, two official plugins are available:
+GasReport é uma aplicação para gerenciamento e relatório de descarregamento de combustível. O usuário pode fazer login, visualizar e adicionar relatórios sobre o processo de descarregamento, e anexar evidências.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades
+
+- Tela de login com validação de nome.
+- Criação e visualização de relatórios de descarregamento.
+- Anexação e edição de arquivos de evidência.
+- Interface responsiva e estilizada com `styled-components`.
+
+## Tecnologias
+
+- **React**: Biblioteca principal para construção da interface.
+- **React Router**: Navegação entre páginas.
+- **styled-components**: Estilização dos componentes.
+- **Axios**: Requisições HTTP (se aplicável).
+
+## Instalação
+
+Siga os passos abaixo para configurar e executar o projeto localmente:
+
+1. **Clone o repositório**
+
+   ```
+   git clone https://github.com/seu-usuario/gasreport.git
+   
+   cd gasreport
+    ```
+2. **Instale as dependências**
+   ```
+    npm instal 
+    ```
+  
+3. **Execute o projeto**
+    ```
+    npm start
+    ```
+Isso iniciará o servidor de desenvolvimento e você poderá acessar a aplicação em http://localhost:3000.
