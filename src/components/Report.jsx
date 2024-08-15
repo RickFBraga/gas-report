@@ -176,7 +176,6 @@ const ReportTable = ({ reportData, onUpdate }) => {
                 {evidencias.map((file, index) => (
                   <FilePreview key={index}>
                     <FileName>{file}</FileName>
-                    butt
                     <RemoveButton
                       type="button"
                       onClick={() => handleFileRemove(index)}

@@ -228,7 +228,6 @@ const Input = styled.input`
   @media (max-width: 670px) {
     font-size: 0.9rem;
     padding: 8px;
-    margin-top: 3px;
   }
 `;
 
