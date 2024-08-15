@@ -4,9 +4,6 @@
 
 GasReport é uma aplicação para gerenciamento e relatório de descarregamento de combustível. O usuário pode fazer login, visualizar e adicionar relatórios sobre o processo de descarregamento, e anexar evidências.
 
-## Vercel
-https://gas-report.vercel.app/
-
 ## Funcionalidades
 
 - Tela de login com validação de nome.
@@ -40,5 +37,6 @@ Siga os passos abaixo para configurar e executar o projeto localmente:
 3. **Execute o projeto**
     ```
     npm start
+    npm run dev
     ```
 Isso iniciará o servidor de desenvolvimento e você poderá acessar a aplicação em http://localhost:3000.
