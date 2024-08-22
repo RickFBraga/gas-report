@@ -31,7 +31,7 @@ export default function HomePage() {
 
       {relatorios.length > 0 &&
         relatorios.map((relatorio, index) => (
-          <Report key={index} reportData={relatorio}/>
+          <Report key={index} reportData={relatorio} />
         ))}
 
       {showModal && (
